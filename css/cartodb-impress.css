@@ -51,6 +51,7 @@ body {
     color: #2E3C43;
     min-height: 740px;
 
+    /*
     background: rgb(215, 215, 215);
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
     background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
@@ -58,6 +59,8 @@ body {
     background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
     background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
     background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    */
+    background: white;
 }
 
 b, strong { font-weight: bold }
@@ -78,7 +81,11 @@ a {
 
 a:hover,
 a:focus {
-    background: rgba(255,255,255,1);
+    background: rgba(255,255,255,.2);
+}
+
+h1 {
+  white-space: nowrap;
 }
 
 .fallback-message {
@@ -103,9 +110,10 @@ a:focus {
 
 .step {
     position: relative;
-    width: 900px;
     padding: 40px;
     margin: 20px auto;
+    width: 1000px;
+    height: 750px;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
@@ -113,7 +121,7 @@ a:focus {
     -o-box-sizing:      border-box;
     box-sizing:         border-box;
 
-    font-size: 48px;
+    font-size: 36px;
     line-height: 1.5;
 }
 
@@ -133,8 +141,6 @@ a:focus {
 .slide {
     display: block;
 
-    width: 900px;
-    height: 700px;
     padding: 40px 60px;
 
     background-color: white;
@@ -142,7 +148,7 @@ a:focus {
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
 
-    font-size: 30px;
+    font-size: 40px;
     line-height: 36px;
     letter-spacing: -1px;
 }
@@ -177,6 +183,7 @@ a:focus {
 
 #intro h1 {
   padding: 400px 40px 20px 40px;
+  font-size: 90%;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -186,6 +193,39 @@ a:focus {
   text-align: right;
   font-size: 60%;
   margin-right: 40px;
+  background: url('../img/picniccode_logo_color_transparente.png') no-repeat 40px 0;
+  background-size: 200px;
+}
+
+#author.juanignaciosl {
+  background: url('../img/nacho.png') no-repeat 100% 40px;
+  background-size: 350px;
+  padding-right: 350px;
+}
+
+#author h1 {
+  font-size: 80%;
+}
+
+#author .metadata {
+  font-size: 60%;
+  margin-bottom: 80px;
+}
+
+#author dl {
+  font-size: 80%;
+}
+
+#author dl dt {
+  font-weight: bold;
+  float: left;
+  clear: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+#author dl dd {
+  float: left;
 }
 
 #title {
