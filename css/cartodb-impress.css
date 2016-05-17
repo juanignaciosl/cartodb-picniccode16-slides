@@ -148,6 +148,10 @@ h1 {
 
 .impress-enabled .step.active { opacity: 1 }
 
+.impress-enabled .step.substep.active { opacity: 1 }
+
+.impress-enabled .step.substep:not(.active){ opacity: 0 }
+
 .slide {
     display: block;
 
