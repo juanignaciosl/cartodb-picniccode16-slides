@@ -131,6 +131,10 @@ h1 {
     line-height: 1.5;
 }
 
+.step img {
+  max-width: 100%;
+}
+
 .impress-enabled .step {
     margin: 0;
     opacity: 0.3;
@@ -169,6 +173,14 @@ h1 {
 
 .slide q strong {
     white-space: nowrap;
+}
+
+.footnote {
+  position: absolute;
+  bottom: 40px;
+  font-size: 70%;
+  font-style: italic;
+  color: #678898;
 }
 
 #intro {
@@ -244,6 +256,13 @@ h1 {
   border-bottom: 1px dashed;
 }
 
+.demo h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed;
+}
+
 .full-image-background {
   padding: 0;
   background-size: auto 100%;
@@ -257,6 +276,9 @@ h1 {
 
 .dark-image-background .content-wrapper {
   background: rgba(0, 0, 0, .5);
+}
+
+.dark-image-background .content-wrapper, .dark-image-background .content-wrapper .footnote {
   color: white;
 }
 
@@ -272,12 +294,20 @@ h1 {
   background-image: url('../img/cartodb-hq.jpg');
 }
 
-#cartodb-product-1, #cartodb-product-2, #cartodb-product-3 {
+.light-map-background {
   background-image: url('../img/backgrounds/map-light.jpg');
 }
 
+.light-map-background .content > * {
+  padding-right: 300px;
+}
+.light-map-background .content > h1, .light-map-background .content > .footnote {
+  padding-right: inherit;
+}
+
 #cartodb-product-1 p {
-  margin: 40px 300px 80px 40px;
+  margin-top: 40px;
+  margin-bottom: 100px;
 }
 
 #title {
@@ -308,7 +338,7 @@ h1 {
 }
 
 #title .footnote {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 #big {
