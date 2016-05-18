@@ -63,9 +63,9 @@
       <h1>Introduction to Location Intelligence with CartoDB</h1>
       <ol>
         <li>What is CartoDB?</li>
-        <li>How does it work?</li>
         <li>Importing data</li>
         <li>Creating maps</li>
+        <li>How does it work?</li>
         <li>Programming with CartoDB</li>
       </ol>
     </div>
@@ -408,7 +408,21 @@
       </ul>
     </div>
 
-    <div id="overview" class="step" data-x="-5000" data-y="2000" data-z="3000" data-scale="3">
+    <div id="full-demo-1" class="step substep demo" data-x="3400" data-y="-1500">
+      <h1>Full demo</h1>
+      <ol>
+        <li>Import and geocode <a href="http://www.valladolid.es/es/temas/hacemos/open-data-datos-abiertos/catalogo-datos/ficheros-datos-elaborados-clasificados-sectores/transporte">Valladolid bus stops</a>.</li>
+        <li>Import "statistical areas" dataset</li>
+        <li>Import <a href="http://www.valladolid.es/es/ciudad/estadisticas/servicios/observatorio-urbano-datos-estadisticos-ciudad/datos-estadisticos-temas/informacion-estadistica-ciudad/poblacion/cifras-poblacion">demographics from areas</a> and clean it a little bit (rows, header and population column).</li>
+        <li>Join areas and population joining by `clave`.</li>
+        <li>Create a map with areas and bus stops.</li>
+        <li>Get the number of bus stops per area.</li>
+        <li>Add the count to the population per areas zone.</li>
+        <li>Create a map showing areas, stops, population and count.</li>
+      </ol>
+    </div>
+
+    <div id="overview" class="step" data-x="-5000" data-y="-4500" data-z="3000" data-scale="5" data-rotate-x="25">
     </div>
 
 </div>
