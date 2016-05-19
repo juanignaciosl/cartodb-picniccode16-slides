@@ -124,6 +124,7 @@
       <ul>
         <li><a href="https://cartodb.com/gallery/">Gallery</a></li>
         <li><a href="http://blog.cartodb.com/">Blog</a></li>
+        <li><a href="http://github.com/CartoDB/training">Training resources</a></li>
       </ul>
     </div>
 
@@ -413,8 +414,8 @@
       <ol>
         <li>Import and geocode <a href="http://www.valladolid.es/es/temas/hacemos/open-data-datos-abiertos/catalogo-datos/ficheros-datos-elaborados-clasificados-sectores/transporte">Valladolid bus stops</a>.</li>
         <li>Import "statistical areas" dataset</li>
-        <li>Import <a href="http://www.valladolid.es/es/ciudad/estadisticas/servicios/observatorio-urbano-datos-estadisticos-ciudad/datos-estadisticos-temas/informacion-estadistica-ciudad/poblacion/cifras-poblacion">demographics from areas</a> and clean it a little bit (rows, header and population column).</li>
-        <li>Join areas and population joining by `clave`.</li>
+        <li>Import <a href="http://www.valladolid.es/es/ciudad/estadisticas/servicios/observatorio-urbano-datos-estadisticos-ciudad/datos-estadisticos-temas/informacion-estadistica-ciudad/poblacion/cifras-poblacion">demographics from areas</a>.</li>
+        <li>Create `population_at_areas` cleaning previous and joining with areas by `clave`.</li>
         <li>Create a map with areas and bus stops.</li>
         <li>Get the number of bus stops per area.</li>
         <li>Add the count to the population per areas zone.</li>
