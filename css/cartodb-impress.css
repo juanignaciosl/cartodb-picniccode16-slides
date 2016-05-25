@@ -314,8 +314,9 @@ h1 {
   margin-bottom: 100px;
 }
 
-.splash h1 {
-  font-size: 300%;
+.splash h1, .end h1 {
+  font-size: 400%;
+  text-align: center;
   -webkit-transform: rotate(-10deg);
   -moz-transform:    rotate(-10deg);
   -ms-transform:     rotate(-10deg);
@@ -572,7 +573,7 @@ h1 {
     to be able to click on other steps.
 
 */
-#overview { display: none }
+#overview:not(.active) { display: none }
 
 /*
     We also make other steps visible and give them a pointer cursor using the

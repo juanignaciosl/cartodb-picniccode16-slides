@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Deep Insights template</title>
+    <meta name=viewport content="width=device-width initial-scale=1">
+    <link href="http://cartodb.com/favicon.ico" rel="shortcutsicon" />
+    <!-- deep insights - repositorio aquí: https://github.com/CartoDB/deep-insights.js -->
+    <link rel="stylesheet " href="http://cartodb.github.io/deep-insights.js/dist/themes/css/deep-insights.css" />
+    <script src="http://cartodb.github.io/deep-insights.js/dist/deep-insights.js"></script>
+    <!-- infowindows -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/andrusieczko/clip-path-polygon/master/build/clip-path-polygon.min.js"></script>
+    <style type="text/css">
+        html,
+        body {
+            position: relative;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Dashboard-canvas" id="dashboard"></div>
+
+    <script>
+        $( document ).ready(function() {
+            /* vizjson url*/
+            var diJSON = '';
+
+            cartodb.deepInsights.createDashboard('#dashboard', diJSON.replace('/api/v2/','/api/v3/'), {
+                no_cdn: false
+            }, function (err, dashboard) {
+
+                var map = dashboard.getMap(),
+                    params = [
+                    /* array con todos los widgets */
+                        
+                    ] 
+                    /* los agregamos al mapa, definiendo a q capa afecta */
+                    dashboard.createFormulaWidget(params[0], map.getLayer(1));
+            });
+
+          /* infowindows */
+          $(function() {
+            var points2 = [[0, 0], [0, 100], [100, 0]];
+            $('.CDB-hook-image-inner').clipPath(points2, {
+              isPercentage: true
+            });
+            $('.CDB-infowindow-media-item').show();
+          });
+
+        });
+
+    </script>
+</body>
+
+</html>
